@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+}
+
+.todo-container {
+  width: 100%;
+  max-width: 31.25rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 6.25rem auto 1.25rem;
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.938rem;
+  color: #ffffff;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3)
+}
+
+.add-list-box {
+  background-color: rgba(255, 255, 255, 0.15);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1.25rem;
+  padding: 0.625rem;
+  border: 1px solid rgb(208, 207, 207);
+}
+
+.add-list-box .add-input {
+  width: 90%;
+  height: 1.875rem;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: white;
+}
+
+.add-list-box .add-input::placeholder{
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.add-list-box .pen,
+.add-list-box .add-btn i {
+  text-align: center;
+  font-size: 1.563rem;
+}
+
+.add-list-box .pen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-list-box .add-btn {
+  background-color: #6c63ff;
+  color: #fff;
+  border: none;
+  outline: none;
+  width: 50px;
+  height: 40px;
+  border-radius: 30px;
+  margin-left: 0.313rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.add-list-box .add-btn:hover{
+    background-color: #5548e0;
+}
+
+.task-list-container li {
+  position: relative;
+  padding: 0.75rem 2.5rem 0.75rem 2.5rem;
+  font-size: 1.2rem;
+  user-select: none;
+  cursor: pointer;
+
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.task-list-container li.checked {
+  text-decoration: line-through;
+}
+
+.task-list-container li i {
+  margin: 0.125rem;
+  color: #6c63ff;
+  font-size: 2.188rem;
+}
+
+.task-list-container li i.checkbox {
+  position: absolute;
+  left: 0;
+}
+
+.task-list-container li.checked i.checkbox {
+  font-size: 1.563rem;
+  left: 5px;
+  transition: all 0.3s ease;
+}
+
+.task-list-container li i.remove {
+  position: absolute;
+  top: 9px;
+  right: 5px;
+}
+
+.task-list-container li i.remove:hover {
+  color: red;
+}
+
+
+@media screen and (max-width:600px) {
+    body{
+        padding:0.938rem;
+    }
+
+    h1{
+        padding: 0.313rem;
+    }
+
+    .add-list-box .add-input {
+        font-size: 1.125rem;
+    }
+}
