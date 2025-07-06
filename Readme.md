@@ -1,6 +1,3 @@
-## ✅ `README.md` for Your To-Do List App
-
-
 # 📝 To-Do List Web App
 
 A clean, modern, and interactive To-Do List web application built using **HTML**, **CSS**, and **JavaScript**. This project helps users manage daily tasks with features like task creation, deletion, and persistent storage using localStorage.
